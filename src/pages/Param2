@@ -1,0 +1,9 @@
+const Param2 = () => {
+    return (
+        <div className="param2-page page">
+            <h2>Param2.jsx</h2>
+        </div>
+    );
+}
+
+export default Param2;
