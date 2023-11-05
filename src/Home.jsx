@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Prop from "./pages/Prop";
+import { nation, nations } from "./data/data";
 
 const Home = () => {
     return (
@@ -16,9 +17,18 @@ const Home = () => {
                 <Link to="/param?q=aa">param전송</Link>
                 <Link to={{
                     pathname: "/param",
-                    search: "?q=aa"
+                    search: "?q=aa&page=10"
                 }}>param전송(query string)
                 </Link>
+            </div>
+            <div>
+                {nations.map(n => (
+                    <Link to={
+                        {
+                            pathname: `/param/${n.name}`
+                        }
+                    }>{n.name}</Link>
+                ))}
             </div>
         </div>
     );
